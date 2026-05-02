@@ -1,0 +1,33 @@
+.DS_Store
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Xcode
+DerivedData/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+
+# Build products
+build/
+dist/
+*.dSYM/
+*.app/
+
+# App signing and archives
+*.ipa
+*.xcarchive
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# Environment
+.env
+.env.*
+!.env.example
