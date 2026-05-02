@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/assets/screenshot-window.jpg" alt="Pulse main window" />
+  <img src="docs/assets/screenshot-window.png" alt="Pulse main window" />
 </p>
 
 ## What it does
