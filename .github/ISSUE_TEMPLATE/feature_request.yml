@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pulse is intentionally small. Before opening, check the README **Roadmap** section to see if this is already planned, and the **Out of scope** section in `CONTRIBUTING.md`.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem?
+      description: What can't you do today? Or what's painful?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: A specific UI / behavior. "I want to be able to X by clicking Y."
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other tools that solve this, or workarounds you've tried.

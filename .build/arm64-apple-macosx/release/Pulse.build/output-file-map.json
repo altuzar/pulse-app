@@ -1,0 +1,82 @@
+{
+  "": {
+    "dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Pulse.d",
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Pulse.o",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/master.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/AppIntents.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/AppIntents.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/AppIntents~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/AppIntents.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/ContentView.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/ContentView.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/ContentView.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/LoginItem.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/LoginItem.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/LoginItem~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/LoginItem.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/MenuBarView.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/MenuBarView.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/MenuBarView~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/MenuBarView.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Models.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Models.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Models.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/NetworkInfoProvider.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/NetworkInfoProvider.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/NetworkInfoProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/NetworkInfoProvider.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/NetworkMonitor.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/NetworkMonitor.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/NetworkMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/NetworkMonitor.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Notifications.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Notifications.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Notifications~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Notifications.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Persistence.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Persistence.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Persistence~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Persistence.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/PowerMonitor.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/PowerMonitor.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/PowerMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/PowerMonitor.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/PulseApp.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/PulseApp.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/PulseApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/PulseApp.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/SettingsView.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/SettingsView.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Theme.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Theme.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Theme~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Theme.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Traceroute.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Traceroute.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Traceroute~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/Traceroute.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/TracerouteView.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/TracerouteView.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/TracerouteView~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/Pulse.build/TracerouteView.swiftdeps"
+  }
+}

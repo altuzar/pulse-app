@@ -1,0 +1,20 @@
+version: "Apple Swift version 6.1 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)"
+options: "2bb853de33c34fd768d37a5ddf384c21142ed8dbab88ccddcce30375c2d5b2c3"
+build_start_time: [1777653025, 598265000]
+build_end_time: [1777653036, 90550000]
+inputs:
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/AppIntents.swift": [1777652043, 990056755]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/ContentView.swift": [1777652899, 266529176]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/LoginItem.swift": [1777651805, 974101181]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/MenuBarView.swift": [1777652926, 995777538]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Models.swift": [1777651747, 277288949]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/NetworkInfoProvider.swift": [1777652059, 690119221]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/NetworkMonitor.swift": [1777651869, 238037847]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Notifications.swift": [1777651799, 686785995]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Persistence.swift": [1777653014, 863537662]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/PowerMonitor.swift": [1777651794, 741385286]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/PulseApp.swift": [1777652732, 300204636]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/SettingsView.swift": [1777652961, 803430859]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Theme.swift": [1777652663, 629386044]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/Traceroute.swift": [1777651812, 501685906]
+  "/Users/altuzar/tests/macapps/speedtester/Sources/Pulse/TracerouteView.swift": [1777652976, 186337075]

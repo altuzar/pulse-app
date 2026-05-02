@@ -1,0 +1,6 @@
+version: "Apple Swift version 6.1 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)"
+options: "989dd9d602ab9c977e29571036a38a5394e6c5b5df502d8e165eac26f1467af8"
+build_start_time: [1777662024, 121558000]
+build_end_time: [1777662025, 804340000]
+inputs:
+  "/Users/altuzar/tests/macapps/speedtester/Sources/IconGen/main.swift": [1777662002, 371804764]

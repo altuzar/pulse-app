@@ -1,0 +1,47 @@
+name: Bug report
+description: Something is broken or behaving wrong
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. The more specific you can be, the faster I can fix it.
+  - type: input
+    id: pulse-version
+    attributes:
+      label: Pulse version
+      placeholder: "1.0 (build 1)"
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: "Sonoma 14.5 / Sequoia 15.3 / etc."
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+      placeholder: "M2 MacBook Air / M3 Pro / Intel Mac"
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, what actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Pulse
+        2. Click ...
+        3. See ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs / screenshots
+      description: Drag-and-drop screenshots here. For console logs, run `log show --predicate 'subsystem CONTAINS "pulse"' --last 5m` in Terminal.

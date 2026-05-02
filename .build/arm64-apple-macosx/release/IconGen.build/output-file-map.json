@@ -1,0 +1,12 @@
+{
+  "": {
+    "dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/IconGen.build/IconGen.d",
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/IconGen.build/IconGen.o",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/IconGen.build/master.swiftdeps"
+  },
+  "/Users/altuzar/tests/macapps/speedtester/Sources/IconGen/main.swift": {
+    "object": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/IconGen.build/main.swift.o",
+    "swiftmodule": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/IconGen.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/altuzar/tests/macapps/speedtester/.build/arm64-apple-macosx/release/IconGen.build/main.swiftdeps"
+  }
+}

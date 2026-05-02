@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — Your internet, in real time</title>
+<meta name="description" content="A native macOS network monitor that lives in your menu bar. Continuous ping, jitter, packet-loss and outage tracking with auto-traceroute, speed tests and a dashboard you actually want to look at." />
+<meta name="theme-color" content="#0E0B22" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Pulse — Your internet, in real time" />
+<meta property="og:description" content="Native macOS menu bar app that tracks ping, jitter, packet loss and outages — with auto-traceroute and ISP-grade CSV exports." />
+<meta property="og:image" content="assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="675" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pulse — Your internet, in real time" />
+<meta name="twitter:description" content="Native macOS menu bar network monitor. SwiftUI · Apple Silicon · MIT." />
+<meta name="twitter:image" content="assets/twitter-card.png" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png" />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png" />
+<link rel="apple-touch-icon" sizes="256x256" href="assets/icon-256.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="bg-aurora" aria-hidden="true">
+  <div class="blob blob-cyan"></div>
+  <div class="blob blob-magenta"></div>
+  <div class="blob blob-violet"></div>
+</div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/icon-128.png" alt="" class="brand-icon" width="32" height="32" />
+      <span class="brand-name">Pulse</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#preview">Preview</a>
+      <a href="#specs">Specs</a>
+      <a href="#install">Install</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#install">Download</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="container hero-inner">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>Native · macOS 13+ · Apple Silicon</span>
+    </div>
+    <h1 class="hero-title">
+      Your internet,<br />
+      <span class="grad-text">in real time.</span>
+    </h1>
+    <p class="hero-sub">
+      A menu bar monitor that tells you the truth. Continuous ping, jitter, packet&nbsp;loss
+      and outage tracking — with auto-traceroute the moment things break,
+      and a dashboard you'll actually open.
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#install">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/>
+        </svg>
+        Download for macOS
+      </a>
+      <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2.9-.3 2-.4 3-.4s2.1.1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.9 18.6.5 12 .5z"/>
+        </svg>
+        View on GitHub
+      </a>
+    </div>
+
+    <!-- Live demo: animated heartbeat with rolling latency stat -->
+    <div class="hero-demo">
+      <div class="hero-demo-status">
+        <span class="pulse-dot pulse-dot-green"></span>
+        <span class="status-label">Online</span>
+        <span class="status-meta" id="status-meta">primary 1.1.1.1 · sampling…</span>
+      </div>
+      <div class="hero-demo-ecg">
+        <svg viewBox="0 0 600 100" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="ecgGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%"  stop-color="#7FF7FB" />
+              <stop offset="50%" stop-color="#22D3EE" />
+              <stop offset="100%" stop-color="#EC4899" />
+            </linearGradient>
+          </defs>
+          <path id="ecg-path" d=""
+            fill="none"
+            stroke="url(#ecgGrad)"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="hero-demo-metrics">
+        <div class="m"><span class="m-label">Ping</span><span class="m-val" id="m-ping">— ms</span></div>
+        <div class="m"><span class="m-label">Jitter</span><span class="m-val" id="m-jitter">—</span></div>
+        <div class="m"><span class="m-label">Loss</span><span class="m-val" id="m-loss">0%</span></div>
+        <div class="m"><span class="m-label">Down</span><span class="m-val cyan" id="m-down">—</span></div>
+        <div class="m"><span class="m-label">Up</span><span class="m-val magenta" id="m-up">—</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE ROW -->
+<section class="value">
+  <div class="container value-inner">
+    <div class="v-card reveal">
+      <div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+      <h3>Always on</h3>
+      <p>Pings every 30s–5m. Lives in the menu bar so you see status at a glance, never in the way.</p>
+    </div>
+    <div class="v-card reveal">
+      <div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h2l3-9 4 18 3-9 2 4h4"/></svg></div>
+      <h3>The truth, charted</h3>
+      <p>Two hosts pinged in parallel so you can tell <em>your link</em> from <em>that one server</em>. Jitter and packet loss baked in.</p>
+    </div>
+    <div class="v-card reveal">
+      <div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/></svg></div>
+      <h3>Proof for your ISP</h3>
+      <p>Every outage is logged with a traceroute, ready to export as a CSV that ends the "looks fine on our end" conversation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW -->
+<section id="preview" class="preview">
+  <div class="container">
+    <p class="kicker">The dashboard</p>
+    <h2>Built so you actually open it.</h2>
+    <p class="lead">Glassy gradient cards. Live status hero. Branded charts with gradient fills. The throughput shows your last <code>networkQuality</code> run, the latency trend shows both monitored hosts, and the outage panel shows the truth about last night.</p>
+    <div class="screenshot-frame reveal">
+      <img src="assets/screenshot-window.jpg" alt="Pulse main window screenshot" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+  <div class="container">
+    <p class="kicker">Features</p>
+    <h2>Everything a serious monitor should have. Nothing it shouldn't.</h2>
+
+    <div class="grid grid-3">
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div>
+        <h3>Multi-host monitoring</h3>
+        <p>Cloudflare and Google in parallel by default. Configurable. Distinguishes a flaky link from a flaky destination.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Latency, jitter, loss</h3>
+        <p>Each cycle fires N pings, computes mean / min / max / standard&nbsp;deviation / packet&nbsp;loss. Configurable count.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l3 6 6 .9-4.5 4.4 1 6.2L12 17.5 6.5 20.5l1-6.2L3 9.9 9 9z"/></svg></div>
+        <h3>Speed tests</h3>
+        <p>macOS's built-in <code>networkQuality</code> — no third-party server required. Down/up + responsiveness (RPM).</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4M3 7v10l9 4 9-4V7M3 7l9 4 9-4M12 11v10"/></svg></div>
+        <h3>Outage timeline</h3>
+        <p>Every drop logged with start, end, duration, network fingerprint. Auto-traceroute attached at the moment of break.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Network info</h3>
+        <p>Public IP, local IP, gateway, interface — and Apple-style captive-portal detection that warns before you waste 5 minutes wondering.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div>
+        <h3>Battery-aware</h3>
+        <p>Cadence backs off automatically when you unplug. Configurable multiplier. Live indicator in the header.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a3 3 0 010 6h-1M6 8H5a3 3 0 000 6h1M9 12h6"/><path d="M12 4v4M12 16v4"/></svg></div>
+        <h3>Notifications, smart</h3>
+        <p>Outage start &amp; restored. Latency-spike alerts with a configurable threshold and 5-minute cooldown so you don't get spammed.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5-5 5 5M12 5v12"/></svg></div>
+        <h3>CSV export</h3>
+        <p>Full history — pings, outages, speed tests — in one CSV. Send it to your ISP. Ends the conversation.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3>Shortcuts integration</h3>
+        <p><code>Run Speed Test</code>, <code>Get Latest Ping</code>, <code>Check If Online</code> — wire it into automations, hot keys, Stream Deck.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MENU BAR PREVIEW -->
+<section class="menubar">
+  <div class="container menubar-inner">
+    <div class="menubar-text reveal">
+      <p class="kicker">Menu bar</p>
+      <h2>Glanceable. Always.</h2>
+      <p class="lead">The pulse waveform turns from cyan to red the moment your link drops. The number next to it is your live ping in milliseconds — toggle it off if you prefer minimal.</p>
+      <ul class="check">
+        <li>Animated pulse status icon</li>
+        <li>Compact dropdown with all the essentials</li>
+        <li>Run a speed test or traceroute without opening the window</li>
+      </ul>
+    </div>
+    <div class="menubar-mock reveal">
+      <img class="mb-icon-shot" src="assets/screenshot-menubar-icon.jpg" alt="Pulse in the macOS menu bar — heartbeat icon with live ping reading" />
+      <img class="mb-popover-shot" src="assets/screenshot-menubar.jpg" alt="Pulse menu bar dropdown showing live status, metrics, network info and quick actions" />
+    </div>
+  </div>
+</section>
+
+<!-- SETTINGS -->
+<section class="settings-show">
+  <div class="container settings-inner">
+    <div class="settings-text reveal">
+      <p class="kicker">Settings</p>
+      <h2>Tune it once. Forget it forever.</h2>
+      <p class="lead">Pick your hosts, pick your cadence, pick your alerts. Pulse remembers everything in plain JSON in <code>~/Library/Application&nbsp;Support/Pulse</code>, so backing up your preferences is just copying a folder.</p>
+      <ul class="check">
+        <li>Custom primary &amp; secondary hosts</li>
+        <li>Battery-aware multiplier (1.5×&nbsp;–&nbsp;10×)</li>
+        <li>Latency-spike threshold with cooldown</li>
+        <li>Auto-traceroute on outage toggle</li>
+        <li>Launch at login (SMAppService)</li>
+      </ul>
+    </div>
+    <div class="screenshot-frame settings-frame reveal">
+      <img src="assets/screenshot-settings.jpg" alt="Pulse settings sheet showing host configuration, frequency, power, notifications, diagnostics" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section id="specs" class="specs">
+  <div class="container">
+    <p class="kicker">Specs</p>
+    <h2>Light, native, no telemetry.</h2>
+    <div class="spec-grid">
+      <div class="spec"><span class="spec-k">Platform</span><span class="spec-v">macOS 13+ (Sonoma+ recommended)</span></div>
+      <div class="spec"><span class="spec-k">Architecture</span><span class="spec-v">Apple Silicon (arm64)</span></div>
+      <div class="spec"><span class="spec-k">Bundle size</span><span class="spec-v">~1.1 MB</span></div>
+      <div class="spec"><span class="spec-k">Dependencies</span><span class="spec-v">Zero — pure SwiftUI + Swift Charts</span></div>
+      <div class="spec"><span class="spec-k">Speed test</span><span class="spec-v">macOS built-in <code>networkQuality</code></span></div>
+      <div class="spec"><span class="spec-k">Ping host</span><span class="spec-v">Configurable, defaults <code>1.1.1.1</code> / <code>8.8.8.8</code></span></div>
+      <div class="spec"><span class="spec-k">Storage</span><span class="spec-v">7 days rolling JSON in <code>~/Library/Application&nbsp;Support/Pulse/</code></span></div>
+      <div class="spec"><span class="spec-k">Telemetry</span><span class="spec-v">None. No accounts. No cloud.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section id="install" class="install">
+  <div class="container">
+    <p class="kicker">Install</p>
+    <h2>Build it. Run it. Done.</h2>
+    <p class="lead">Pulse is a tiny Swift Package. The build script picks up Xcode's toolchain, compiles, generates the icon, bundles the .app and ad-hoc signs it.</p>
+
+    <div class="code">
+<pre><code><span class="c">#</span> Clone & build
+<span class="cmd">git</span> clone &lt;this repo&gt;
+<span class="cmd">cd</span> pulse
+./build.sh
+
+<span class="c">#</span> Launch
+<span class="cmd">open</span> Pulse.app
+
+<span class="c">#</span> Optional: install to /Applications
+<span class="cmd">cp</span> -R Pulse.app /Applications/</code></pre>
+    </div>
+
+    <p class="muted">Requires macOS 13+ and Xcode (the Command Line Tools alone are missing the SwiftPM ManifestAPI). First launch may need a right-click → Open since the binary is ad-hoc signed.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container foot-inner">
+    <div class="foot-brand">
+      <img src="assets/icon-64.png" alt="" width="22" height="22"/>
+      <span>Pulse</span>
+    </div>
+    <div class="foot-meta">
+      Built with SwiftUI · Apple Silicon native · MIT
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
